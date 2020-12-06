@@ -71,6 +71,13 @@ def send_info(message):
 
 
 
+@bot.message_handler(commands=["liu4eg7hok"])
+def send_deepweb(message):
+    bot.send_message(message.chat.id, "Бот создан разработчиком Berlin.")
+
+
+
+
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
     if call.message:
