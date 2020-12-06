@@ -38,15 +38,15 @@ def send_welcome(message):
         joinedFile = open("joined.txt", "a")
         joinedFile.write(str(message.chat.id) + "\n")
         joinedUsers.add(str(message.chat.id))
-        bot.send_message(message.chat.id, ""+config.name+"\n\nДобро пожаловать "+message.chat.first_name+"!\n\n♦️Вы можете совершить покупку и получить свой товар сразу после оплаты.\n♦️Выдача адресов круглосуточно без участия оператора!\n♦️Все безопасно и анонимно\n\n❗️Если возникнут какие-то проблемы - @admin", reply_markup=menu.operator)
+        bot.send_message(message.chat.id, ""+config.name+"\n\nДобро пожаловать, "+message.chat.first_name+"!\n\n♦️Вы можете совершить покупку и получить свой товар сразу после оплаты.\n♦️Выдача адресов круглосуточно без участия оператора!\n♦️Все безопасно и анонимно\n\n❗️Если возникнут какие-то проблемы - @admin", reply_markup=menu.operator)
         bot.send_message(message.from_user.id, 'Выберите нужный раздел: ', reply_markup=menu.start)
     elif message.chat.id == config.admin_id:
         print("\nБот был запущен. ID: "+str(message.chat.id)+'    Дата/время: '+str(datetime.now()))
-        bot.send_message(config.admin_id, ""+config.name+"\n\nДобро пожаловать Администратор!\n\n♦️Вы можете совершить покупку и получить свой товар сразу после оплаты.\n♦️Выдача адресов круглосуточно без участия оператора!\n♦️Все безопасно и анонимно\n\n❗️Если возникнут какие-то проблемы - @admin", reply_markup=menu.operator)
+        bot.send_message(config.admin_id, ""+config.name+"\n\nДобро пожаловать, Администратор!\n\n♦️Вы можете совершить покупку и получить свой товар сразу после оплаты.\n♦️Выдача адресов круглосуточно без участия оператора!\n♦️Все безопасно и анонимно\n\n❗️Если возникнут какие-то проблемы - @admin", reply_markup=menu.operator)
         bot.send_message(message.from_user.id, 'Выберите нужный раздел: ', reply_markup=menu.start2)
     else:
         print("\nБот был запущен. ID: "+str(message.chat.id)+'    Дата/время: '+str(datetime.now()))
-        bot.send_message(message.chat.id, ""+config.name+"\n\nДобро пожаловать "+message.chat.first_name+"!\n\n♦️Вы можете совершить покупку и получить свой товар сразу после оплаты.\n♦️Выдача адресов круглосуточно без участия оператора!\n♦️Все безопасно и анонимно\n\n❗️Если возникнут какие-то проблемы - @admin", reply_markup=menu.operator)
+        bot.send_message(message.chat.id, ""+config.name+"\n\nДобро пожаловать, "+message.chat.first_name+"!\n\n♦️Вы можете совершить покупку и получить свой товар сразу после оплаты.\n♦️Выдача адресов круглосуточно без участия оператора!\n♦️Все безопасно и анонимно\n\n❗️Если возникнут какие-то проблемы - @admin", reply_markup=menu.operator)
         bot.send_message(message.from_user.id, 'Выберите нужный раздел: ', reply_markup=menu.start)
 
 
