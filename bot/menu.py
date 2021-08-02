@@ -1,3 +1,5 @@
+# - *- coding: utf- 8 - *-
+
 import telebot
 from telebot import types
 
@@ -172,5 +174,5 @@ rayon_perm.row(back)
 
 
 operator = types.InlineKeyboardMarkup()
-but_1 = types.InlineKeyboardButton(text="Тех.Поддержка", url="url)
+but_1 = types.InlineKeyboardButton(text="Тех.Поддержка", url="https://t.me/admin")
 operator.row(but_1)
